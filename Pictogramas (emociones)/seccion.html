@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Selección</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <hr>
+    <section class="emociones">
+      <h1>EMOCIONES</h1>
+      <h2>¿NOS RECONOCES?</h2>
+    
+      <div class="grid-container">
+    
+        <div class="card emotion" role="button" tabindex="0" aria-label="Feliz" onclick="narrate('YO SOY ALEGRÍA. ESTOY ALEGRE CUANDO JUEGO CON MIS AMIGOS ')">
+          <img src="imagenes/alegre (2).png" alt="Feliz">
+          <div class="text-content">
+            <p><strong>YO SOY ALEGRÍA</strong></p>
+            <br>
+            <p>ESTOY ALEGRE CUANDO JUEGO CON MIS AMIGOS </p>
+          </div>
+        </div>
+        <hr>
+    
+        <div class="card emotion" role="button" tabindex="0" aria-label="Triste" onclick="narrate('YO SOY TRISTEZA. ESTOY TRISTE CUANDO ME LASTIMO')">
+          <img src="imagenes/triste (1).png" alt="Triste">
+          <div class="text-content">
+            <p><strong>YO SOY TRISTEZA</strong></p>
+            <br>
+            <p>ESTOY TRISTE CUANDO ME LASTIMO </p>
+          </div>
+        </div>
+        <hr>
+    
+        <div class="card emotion" role="button" tabindex="0" aria-label="Enojo" onclick="narrate(' YO SOY ENOJO. Estoy enojado cuando me quitan algo')">
+          <img src="imagenes/enfadar.png" alt="Enojo">
+          <div class="text-content">
+            <p><strong>YO SOY ENOJO</strong></p>
+            <br>
+            <p>Estoy enojado cuando me quitan algo</p>
+          </div>
+        </div>
+        <hr>
+    
+        <div class="card emotion" role="button" tabindex="0" aria-label="Aburrido" onclick="narrate(' YO SOY ABURRIMIENTO. ESTOY ABURRIDO CUANDO NO HAY JUEGOS')">
+          <img src="imagenes/aburrido (1).png" alt="Aburrido">
+          <div class="text-content">
+            <p><strong>YO SOY ABURRIMIENTO</strong></p>
+            <br>
+            <p>ESTOY ABURRIDO CUANDO NO HAY JUEGOS</p>
+          </div>
+        </div>
+        <hr>
+    
+        <div class="card emotion" role="button" tabindex="0" aria-label="Miedo" onclick="narrate(' YO SOY MIEDO. ENGO MIEDO CUANDO ESTA OSCURO  ')">
+          <img src="imagenes/asustado.png" alt="Miedo">
+          <div class="text-content">
+            <p><strong>YO SOY MIEDO</strong></p>
+            <br>
+            <p>TENGO MIEDO CUANDO ESTA OSCURO </p>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+    <hr>
+    <section>
+    <div class="container">
+        <div class="selection-section">
+            <!-- Frases a la izquierda -->
+            <div class="phrases">
+                <div class="phrase" onclick="selectPhrase(this, 'Frase 1')">Enojado</div>
+                <div class="phrase" onclick="selectPhrase(this, 'Frase 2')">Feliz</div>
+                <div class="phrase" onclick="selectPhrase(this, 'Frase 3')">Aburrido</div>
+            </div>
+
+            <!-- Línea vertical separadora -->
+            <div class="line-separator"></div>
+
+            <!-- Imágenes a la derecha -->
+            <div class="images">
+                <div class="image-box" onclick="selectImage(this, 'img1')"><img src="pic/aburrido (1).png" alt="Imagen 1"></div>
+                <div class="image-box" onclick="selectImage(this, 'img2')"><img src="pic/alegre (2).png" alt="Imagen 2"></div>
+                <div class="image-box" onclick="selectImage(this, 'img3')"><img src="pic/enfadar.png" alt="Imagen 3"></div>
+                <div class="image-box" onclick="selectImage(this, 'img4')"><img src="pic/triste (1).png" alt="Imagen 4"></div>
+            </div>
+        </div>
+    </section>
+
+        <div id="result" class="result-section hidden">
+            <div class="selected-image">
+                <img id="resultImage" src="" alt="Imagen Seleccionada">
+            </div>
+            <div class="selected-phrase" id="resultPhrase"></div>
+        </div>
+
+        <div id="error" class="error-message hidden">
+            <p>Selección incorrecta. Intenta de nuevo.</p>
+        </div>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+</html>
+
